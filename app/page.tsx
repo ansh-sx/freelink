@@ -130,11 +130,9 @@ const EditorPage = () => {
 />
           <SectionDivider />
           <LinksForm
-            links={data.ls}
-            onChange={(ls: LinkItem[]) =>
-              setData((prev) => ({ ...prev, ls }))
-            }
-          />
+  modelValue={data.ls}
+  setModelValue={(ls: LinkItem[]) => setData((prev) => ({ ...prev, ls }))}
+/>
         </div>
         <div className="border-t bg-white flex items-center">
           <button
