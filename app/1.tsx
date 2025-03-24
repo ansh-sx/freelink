@@ -1,8 +1,8 @@
 // pages/your-page.tsx
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import TemplatesSimple from '@/components/templates/TemplatesSimple'
-import BaseLoading from '@/components/ui/BaseLoading'
+import ProfileSection from '@/components/Templates/Simple'
+import Spinner from '@/components/Base/Loading'
 import { decodeData } from '@/utils/transformer'
 
 const YourPage = () => {
