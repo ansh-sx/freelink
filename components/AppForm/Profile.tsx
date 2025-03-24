@@ -1,6 +1,7 @@
 // components/ProfileForm.tsx
 'use client';
 import React from 'react';
+import FormSection from '@/components/Base/FormSection.tsx';
 
 interface ProfileFormProps {
   name: string;
@@ -11,7 +12,7 @@ interface ProfileFormProps {
 
 const ProfileForm: React.FC<ProfileFormProps> = ({ name, desc, image, onChange }) => {
   return (
-    <BaseFormSection
+    <FormSection
       title="Profile"
       description="Some public information about you"
     >
@@ -63,7 +64,7 @@ const ProfileForm: React.FC<ProfileFormProps> = ({ name, desc, image, onChange }
           </div>
         </div>
       </div>
-    </BaseFormSection>
+    </FormSection>
   );
 };
 
