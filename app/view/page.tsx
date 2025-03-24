@@ -1,6 +1,6 @@
 'use client'
 // pages/your-page.tsx
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import ProfileSection from '@/components/Templates/Simple'
 import Spinner from '@/components/Base/Loading'
