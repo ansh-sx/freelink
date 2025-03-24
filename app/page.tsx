@@ -103,13 +103,16 @@ const EditorPage = () => {
       <div className="col-span-2 h-screen flex flex-col bg-slate-100">
         <div className="flex-1 overflow-y-auto p-8">
           <ProfileForm
-            name={data.n}
-            desc={data.d}
-            image={data.i}
-            onChange={(updated: Partial<FormData>) =>
-              setData((prev) => ({ ...prev, ...updated }))
-            }
-          />
+  name={data.n}
+  desc={data.d}
+  image={data.i}
+  onChange={(field, value) =>
+    setData((prev) => ({
+      ...prev,
+      ...(field === 'name' ? { n: value } : field === 'desc' ? { d: value } : { i: value }),
+    }))
+  }
+/>
           <SectionDivider />
           <SocialLinksForm
             facebook={data.f}
