@@ -22,10 +22,10 @@ const YourPage = () => {
   return (
     <div>
       {decodedData ? (
-        <TemplatesSimple acc={decodedData} />
+        <ProfileSection acc={decodedData} />
       ) : (
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <BaseLoading className="h-5 w-5" />
+          <Spinner className="h-5 w-5" />
         </div>
       )}
     </div>
