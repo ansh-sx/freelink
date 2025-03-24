@@ -1,10 +1,10 @@
 // pages/editor.tsx
 import { useState } from 'react'
-import AppFormProfile from '@/components/forms/AppFormProfile'
-import AppFormHR from '@/components/forms/AppFormHR'
-import AppFormSocialLinks from '@/components/forms/AppFormSocialLinks'
-import AppFormLinks from '@/components/forms/AppFormLinks'
-import AppFormPreview from '@/components/forms/AppFormPreview'
+import ProfileForm from '@/components/AppForm/Profile'
+import SectionDivider from '@/components/AppForm/Hr'
+import SocialLinksForm from '@/components/AppForm/SocialLinks'
+import LinksForm from '@/components/AppForm/Links'
+import PhonePreview from '@/components/AppForm/Preview'
 import { encodeData } from '@/utils/transformer'
 
 const EditorPage = () => {
@@ -79,7 +79,7 @@ const EditorPage = () => {
     <div className="h-screen grid grid-cols-3 divide-x">
       <div className="col-span-2 h-screen flex flex-col bg-slate-100">
         <div className="flex-1 overflow-y-auto p-8">
-          <AppFormProfile
+          <LinksForm
             name={data.n}
             desc={data.d}
             image={data.i}
@@ -87,8 +87,8 @@ const EditorPage = () => {
               setData((prev) => ({ ...prev, ...updated }))
             }
           />
-          <AppFormHR />
-          <AppFormSocialLinks
+          <SectionDivider />
+          <SocialLinksForm
             facebook={data.f}
             twitter={data.t}
             instagram={data.ig}
@@ -102,8 +102,8 @@ const EditorPage = () => {
               setData((prev) => ({ ...prev, ...updated }))
             }
           />
-          <AppFormHR />
-          <AppFormLinks
+          <SectionDivider />
+          <LinksForm
             links={data.ls}
             onChange={(ls: any[]) =>
               setData((prev) => ({ ...prev, ls }))
@@ -135,13 +135,13 @@ const EditorPage = () => {
           </a>
         </div>
       </div>
-      <AppFormPreview data={data} />
+      <PhonePreview data={data} />
       <a
         href="https://twitter.com/fayazara"
         target="_blank"
         className="absolute bottom-0 right-0 bg-white rounded-tl-lg shadow px-4 py-1 font-medium text-sm text-gray-500"
       >
-        Made by Fayaz
+        Made by Ansh
       </a>
     </div>
   )
