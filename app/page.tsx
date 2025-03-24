@@ -1,3 +1,4 @@
+'use client';
 // pages/editor.tsx
 import { useState } from 'react'
 import ProfileForm from '@/components/AppForm/Profile'
