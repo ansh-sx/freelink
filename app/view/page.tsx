@@ -1,24 +1,24 @@
 'use client'
-// pages/your-page.tsx
-import { useRouter } from 'next/router'
+
+import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import ProfileSection from '@/components/Templates/Simple'
 import Spinner from '@/components/Base/Loading'
 import { decodeData } from '@/utils/transformer'
 
-const YourPage = () => {
+const ViewPage = () => {
   const router = useRouter()
   const [decodedData, setDecodedData] = useState<any>(null)
 
   useEffect(() => {
-    if (router.isReady) {
-      const acc = router.query.data
-      if (acc) {
-        const result = decodeData(acc as string)
-        setDecodedData(result)
-      }
+    // This workaround fetches query params from the URL manually in App Router
+    const searchParams = new URLSearchParams(window.location.search)
+    const acc = searchParams.get('data')
+    if (acc) {
+      const result = decodeData(acc)
+      setDecodedData(result)
     }
-  }, [router.isReady, router.query.data])
+  }, [])
 
   return (
     <div>
@@ -33,4 +33,4 @@ const YourPage = () => {
   )
 }
 
-export default YourPage;
+export default ViewPage
