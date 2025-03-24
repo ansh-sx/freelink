@@ -1,7 +1,7 @@
 // components/ProfileForm.tsx
 'use client';
 import React from 'react';
-import FormSection from '@/components/Base/FormSection.tsx';
+import FormSection from '@/components/Base/FormSection';
 
 interface ProfileFormProps {
   name: string;
