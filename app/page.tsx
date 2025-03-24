@@ -115,19 +115,19 @@ const EditorPage = () => {
 />
           <SectionDivider />
           <SocialLinksForm
-            facebook={data.f}
-            twitter={data.t}
-            instagram={data.ig}
-            github={data.gh}
-            telegram={data.tg}
-            linkedin={data.l}
-            email={data.e}
-            whatsapp={data.w}
-            youtube={data.y}
-            onChange={(updated: Partial<FormData>) =>
-              setData((prev) => ({ ...prev, ...updated }))
-            }
-          />
+  facebook={data.f}
+  twitter={data.t}
+  instagram={data.ig}
+  github={data.gh}
+  telegram={data.tg}
+  linkedin={data.l}
+  email={data.e}
+  whatsapp={data.w}
+  youtube={data.y}
+  onChange={(field: string, value: string) =>
+    setData((prev) => ({ ...prev, [field]: value }))
+  }
+/>
           <SectionDivider />
           <LinksForm
             links={data.ls}
