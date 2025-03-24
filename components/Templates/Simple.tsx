@@ -1,7 +1,7 @@
 // components/ProfileSection.tsx
 import React from 'react';
 import ExternalLink from '@/components/ExternalLink';
-import Icon from './Icon'; // Adjust import based on your Icon component location
+import { Icon } from '@iconify/react'; // Adjust import based on your Icon component location
 
 interface ExternalLinkItem {
   l: string;
