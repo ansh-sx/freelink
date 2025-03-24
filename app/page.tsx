@@ -1,5 +1,5 @@
-'use client';
-// pages/editor.tsx
+'use client'
+
 import { useState } from 'react'
 import ProfileForm from '@/components/AppForm/Profile'
 import SectionDivider from '@/components/AppForm/Hr'
@@ -8,8 +8,30 @@ import LinksForm from '@/components/AppForm/Links'
 import PhonePreview from '@/components/AppForm/Preview'
 import { encodeData } from '@/utils/transformer'
 
+type LinkItem = {
+  l: string
+  i: string
+  u: string
+}
+
+type FormData = {
+  n: string
+  d: string
+  i: string
+  f: string
+  t: string
+  ig: string
+  gh: string
+  tg: string
+  l: string
+  e: string
+  w: string
+  y: string
+  ls: LinkItem[]
+}
+
 const EditorPage = () => {
-  const [data, setData] = useState({
+  const [data, setData] = useState<FormData>({
     n: '',
     d: '',
     i: '',
@@ -84,7 +106,7 @@ const EditorPage = () => {
             name={data.n}
             desc={data.d}
             image={data.i}
-            onChange={(updated: any) =>
+            onChange={(updated: Partial<FormData>) =>
               setData((prev) => ({ ...prev, ...updated }))
             }
           />
@@ -99,14 +121,14 @@ const EditorPage = () => {
             email={data.e}
             whatsapp={data.w}
             youtube={data.y}
-            onChange={(updated: any) =>
+            onChange={(updated: Partial<FormData>) =>
               setData((prev) => ({ ...prev, ...updated }))
             }
           />
           <SectionDivider />
           <LinksForm
             links={data.ls}
-            onChange={(ls: any[]) =>
+            onChange={(ls: LinkItem[]) =>
               setData((prev) => ({ ...prev, ls }))
             }
           />
