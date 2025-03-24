@@ -58,70 +58,70 @@ const ProfileSection: React.FC<ProfileProps> = ({ acc }) => {
           {acc.f && (
             <span className="p-1">
               <a href={acc.f} target="_blank" rel="noopener noreferrer">
-                <Icon name="ph:facebook-logo-duotone" className="h-6 w-6" />
+                <Icon icon="ph:facebook-logo-duotone" className="h-6 w-6" />
               </a>
             </span>
           )}
           {acc.t && (
             <span className="p-1">
               <a href={acc.t} target="_blank" rel="noopener noreferrer">
-                <Icon name="ph:twitter-logo-duotone" className="h-6 w-6" />
+                <Icon icon="ph:twitter-logo-duotone" className="h-6 w-6" />
               </a>
             </span>
           )}
           {acc.ig && (
             <span className="p-1">
               <a href={acc.ig} target="_blank" rel="noopener noreferrer">
-                <Icon name="ph:instagram-logo-duotone" className="h-6 w-6" />
+                <Icon icon="ph:instagram-logo-duotone" className="h-6 w-6" />
               </a>
             </span>
           )}
           {acc.m && (
             <span className="p-1">
               <a href={acc.m} target="_blank" rel="noopener noreferrer">
-                <Icon name="ph:envelope-duotone" className="h-6 w-6" />
+                <Icon icon="ph:envelope-duotone" className="h-6 w-6" />
               </a>
             </span>
           )}
           {acc.tg && (
             <span className="p-1">
               <a href={acc.tg} target="_blank" rel="noopener noreferrer">
-                <Icon name="ph:telegram-logo-duotone" className="h-6 w-6" />
+                <Icon icon="ph:telegram-logo-duotone" className="h-6 w-6" />
               </a>
             </span>
           )}
           {acc.w && (
             <span className="p-1">
               <a href={`https://wa.me/${acc.w}`} target="_blank" rel="noopener noreferrer">
-                <Icon name="ph:whatsapp-logo-duotone" className="h-6 w-6" />
+                <Icon icon="ph:whatsapp-logo-duotone" className="h-6 w-6" />
               </a>
             </span>
           )}
           {acc.y && (
             <span className="p-1">
               <a href={acc.y} target="_blank" rel="noopener noreferrer">
-                <Icon name="ph:youtube-logo-duotone" className="h-6 w-6" />
+                <Icon icon="ph:youtube-logo-duotone" className="h-6 w-6" />
               </a>
             </span>
           )}
           {acc.e && (
             <span className="p-1">
               <a href={`mailto:${acc.e}`} target="_blank" rel="noopener noreferrer">
-                <Icon name="ph:envelope-duotone" className="h-6 w-6" />
+                <Icon icon="ph:envelope-duotone" className="h-6 w-6" />
               </a>
             </span>
           )}
           {acc.gh && (
             <span className="p-1">
               <a href={acc.gh} target="_blank" rel="noopener noreferrer">
-                <Icon name="ph:github-logo-duotone" className="h-6 w-6" />
+                <Icon icon="ph:github-logo-duotone" className="h-6 w-6" />
               </a>
             </span>
           )}
           {acc.l && (
             <span className="p-1">
               <a href={acc.l} target="_blank" rel="noopener noreferrer">
-                <Icon name="ph:linkedin-logo-duotone" className="h-6 w-6" />
+                <Icon icon="ph:linkedin-logo-duotone" className="h-6 w-6" />
               </a>
             </span>
           )}
