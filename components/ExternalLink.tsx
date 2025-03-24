@@ -1,6 +1,7 @@
 // components/LinkItem.tsx
 import React from 'react';
 import Link from 'next/link';
+import { Icon } from '@iconify/react'; // Added Iconify
 
 interface LinkItemProps {
   label: string;
