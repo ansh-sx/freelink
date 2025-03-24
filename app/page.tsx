@@ -102,7 +102,7 @@ const EditorPage = () => {
     <div className="h-screen grid grid-cols-3 divide-x">
       <div className="col-span-2 h-screen flex flex-col bg-slate-100">
         <div className="flex-1 overflow-y-auto p-8">
-          <LinksForm
+          <ProfileForm
             name={data.n}
             desc={data.d}
             image={data.i}
