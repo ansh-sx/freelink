@@ -1,7 +1,7 @@
 // components/PhonePreview.tsx
 'use client';
 import React from 'react';
-import {ProfileSection} from '@/components/Templates/Simple.tsx'
+import {ProfileSection} from '@/components/Templates/Simple'
 
 interface PhonePreviewProps {
   data: any;
